@@ -41,8 +41,9 @@ export class CompanyComponent implements OnInit {
 
   LoadCompany(){
     this.api.Getallcompany().subscribe(response=>{
-      this.companydata=response;
-      this.finaldata = new MatTableDataSource<companymodel>(this.companydata);
+      console.log(response['hydra:member']);
+      this.companydata=response['hydra:member'];
+      this.finaldata = new MatTableDataSource<any>(this.companydata);
       this.finaldata.paginator = this._paginator;
       this.finaldata.sort = this._sort;
     });

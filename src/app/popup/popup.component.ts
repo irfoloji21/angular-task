@@ -21,6 +21,7 @@ export class PopupComponent implements OnInit {
   ngOnInit(): void {
 
 
+
     if(this.data.id != '' && this.data.id != null){
       this.api.GetCompanybycode(this.data.id).subscribe(response=>{
         this.editdata=response;
@@ -42,12 +43,12 @@ export class PopupComponent implements OnInit {
 
   companyform = this.builder.group({
     id: this.builder.control({ value: '', disabled: true }),
-    name: this.builder.control('', [Validators.required]),
+    name: this.builder.control('', [Validators.required, Validators.minLength(3), Validators.maxLength(50)]),
     orgurl: this.builder.control('', [Validators.required]),
-    firstName: this.builder.control('', [Validators.required]),
-    lastName: this.builder.control('', [Validators.required]),
-    email: this.builder.control('', [Validators.required]),
-    telephone: this.builder.control('', [Validators.required]),
+    firstName: this.builder.control('', [Validators.required, Validators.minLength(3), Validators.maxLength(50)]),
+    lastName: this.builder.control('', [Validators.required, Validators.minLength(3), Validators.maxLength(50)]),
+    email: this.builder.control('', [Validators.required, Validators.email]),
+    telephone: this.builder.control('', [Validators.required, Validators.minLength(3), Validators.maxLength(50)]),
     updatedTs: this.builder.control(''),
     address: this.builder.control('', [Validators.required])
 });

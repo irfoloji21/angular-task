@@ -1,39 +1,85 @@
 <form class="example-form" [formGroup]="companyform" (ngSubmit)="SaveCompany()">
 
-  <mat-form-field class="example-full-width" appearance="fill">
+  <mat-form-field class="example-full-width" style="display: none;" appearance="fill">
     <mat-label>Id</mat-label>
     <input matInput placeholder="ID" formControlName="id" >
   </mat-form-field>
 
   <mat-form-field class="example-full-width" appearance="fill">
     <mat-label>Company Name</mat-label>
-    <input matInput placeholder="Company Name" formControlName="name" >
+    <input class="form-control" matInput placeholder="Company Name" formControlName="name" required ngModel>
+    <mat-error *ngIf="companyform.controls.name.hasError('minlength')">
+      C.Name must be at least <strong>3 characters long</strong>
+    </mat-error>
+    <mat-error *ngIf="companyform.controls.name.hasError('maxlength')">
+      Company Name must be at most <strong>50 characters long</strong>
+    </mat-error>
+    <mat-error *ngIf="companyform.controls.name.hasError('required')">
+      Company Name is <strong>required</strong>
+    </mat-error>
   </mat-form-field>
 
   <mat-form-field class="example-full-width" appearance="fill">
     <mat-label>URL</mat-label>
     <input matInput placeholder="URL" formControlName="orgurl" >
+    <mat-error *ngIf="companyform.controls.orgurl.invalid">
+      Please enter a valid URL
+    </mat-error>
   </mat-form-field>
 
   <mat-form-field class="example-full-width" appearance="fill">
     <mat-label>First Name</mat-label>
     <input matInput placeholder="First Name" formControlName="firstName" >
+    <mat-error *ngIf="companyform.controls.firstName.hasError('minlength')">
+      First Name must be at least <strong>3 characters long</strong>
+    </mat-error>
+    <mat-error *ngIf="companyform.controls.firstName.hasError('maxlength')">
+      First Name must be at most <strong>50 characters long</strong>
+    </mat-error>
+    <mat-error *ngIf="companyform.controls.firstName.hasError('required')">
+      First Name is <strong>required</strong>
+    </mat-error>
+
   </mat-form-field>
+
 
   <mat-form-field class="example-full-width" appearance="fill">
     <mat-label>Last Name</mat-label>
     <input matInput placeholder="Last Name" formControlName="lastName" >
-
+    <mat-error *ngIf="companyform.controls.lastName.hasError('minlength')">
+      Last Name must be at least <strong>3 characters long</strong>
+    </mat-error>
+    <mat-error *ngIf="companyform.controls.lastName.hasError('maxlength')">
+      Last Name must be at most <strong>50 characters long</strong>
+    </mat-error>
+    <mat-error *ngIf="companyform.controls.lastName.hasError('required')">
+      Last Name is <strong>required</strong>
+    </mat-error>
   </mat-form-field>
+
+
 
   <mat-form-field class="example-full-width" appearance="fill">
     <mat-label>Email</mat-label>
-    <input matInput placeholder="Email" formControlName="email" >
+    <input type="email" matInput placeholder="Email" formControlName="email" >
+    <mat-error *ngIf="companyform.controls.email.hasError('required')">
+      Email is <strong>required</strong>
+    </mat-error>
+    <mat-error *ngIf="companyform.controls.email.invalid">
+      Please enter a valid email address
+    </mat-error>
+
   </mat-form-field>
 
   <mat-form-field class="example-full-width" appearance="fill">
     <mat-label>Phone</mat-label>
-    <input matInput placeholder="Phone" formControlName="telephone" >
+    <input type="tel" matInput placeholder="Phone" formControlName="telephone"  pattern="[0-9]{11}">
+    <mat-error *ngIf="companyform.controls.telephone.hasError('required')">
+      Phone is <strong>required</strong>
+    </mat-error>
+    <mat-error *ngIf="companyform.controls.telephone.invalid">
+      Please enter a valid phone number
+    </mat-error>
   </mat-form-field>
 
   <mat-form-field class="example-full-width" style="display: none;" appearance="fill">

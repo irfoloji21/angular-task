@@ -9,14 +9,14 @@ import { companymodel } from '../Model/companymodel';
 export class ApiService {
 
   constructor(private http:HttpClient) { }
-  apiurl='http://localhost:3000/company';
+  apiurl='https://arkham.cvtr.io/test/api/advertisers';
 
-  Getallcompany():Observable<companymodel[]>{
-    return this.http.get<companymodel[]>(this.apiurl);
+  Getallcompany(){
+    return this.http.get<any>(this.apiurl);
   }
 
-  GetCompanybycode(id:any):Observable<companymodel>{
-    return this.http.get<companymodel>(this.apiurl + '/' + id);
+  GetCompanybycode(id:any){
+    return this.http.get<any>(this.apiurl + '/' + id);
   }
 
   RemoveCompanybycode(id:any){
