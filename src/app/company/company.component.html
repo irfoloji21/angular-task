@@ -1,12 +1,9 @@
 
-<div class="example-container mat-elevation-z8">
+<div class="example-container  mat-elevation-z">
   <div>
-    <a mat-raised-button color="primary" (click)="Openpopup('')" style="margin: 2%">Create New</a>
+    <a class="createButton" mat-raised-button color="primary" (click)="Openpopup('')">Create New</a>
   </div>
-
-  <table mat-table [dataSource]="finaldata" matSort class="mat-elevation-z8" >
-
-
+  <table mat-table [dataSource]="finaldata" matSort tabindex="0">
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
       <td mat-cell *matCellDef="let element">{{element.id}}</td>
@@ -52,13 +49,11 @@
       <td mat-cell *matCellDef="let element">{{element.address}}</td>
     </ng-container>
 
-    <ng-container matColumnDef="action">
+    <ng-container matColumnDef="action" stickyEnd>
       <th mat-header-cell *matHeaderCellDef> Action</th>
       <td mat-cell *matCellDef="let element">
-          <div>
-              <a mat-raised-button (click)="EditCompany(element.id)" color="primary">Edit</a> |
-              <a mat-raised-button (click)="RemoveCompany(element.id)" color="accent">Delete</a>
-          </div>
+        <a mat-raised-button (click)="EditCompany(element.id)"><mat-icon>edit</mat-icon></a>
+        <a mat-raised-button (click)="RemoveCompany(element.id)"><mat-icon>delete_forever</mat-icon></a>
       </td>
     </ng-container>
 
