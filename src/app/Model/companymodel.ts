@@ -1,0 +1,11 @@
+export interface companymodel{
+  id:number,
+  name:string,
+  orgurl:string,
+  firstName:string,
+  lastName:string,
+  email:string,
+  telephone:string,
+  updatedTs:Date,
+  address:string,
+}

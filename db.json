@@ -1,0 +1,80 @@
+{
+  "company": [
+    {
+      "id": 1,
+      "name": "Fiat ",
+      "orgurl": "http://www.fiat.co.uk/",
+      "firstName": "John",
+      "lastName": "Smith",
+      "email": "info@fiat.co.uk",
+      "telephone": "02012345678",
+      "updatedTs": "2022-11-24T03:45:56.228Z",
+      "address": "/addresses/1"
+    },
+    {
+      "id": 2,
+      "name": "Mercedes-Benz",
+      "orgurl": "http://www.mercedes-benz.co.uk/",
+      "firstName": "Jim",
+      "lastName": "Hendrix",
+      "email": "info@mercedes-benz.co.uk",
+      "telephone": "02012345678",
+      "updatedTs": "2017-08-08T14:36:49+00:00",
+      "address": "/addresses/2"
+    },
+    {
+      "id": 3,
+      "name": "Microsoft",
+      "orgurl": "http://www.microsoft.co.uk/",
+      "firstName": "John",
+      "lastName": "Snow",
+      "email": "info@microsoft.co.uk",
+      "telephone": "02012345678",
+      "updatedTs": "2022-11-24T03:44:14.636Z",
+      "address": "/addresses/3"
+    },
+    {
+      "id": 4,
+      "name": "Apple",
+      "orgurl": "http://www.apple.com/uk/",
+      "firstName": "Tyrion",
+      "lastName": "Lannister",
+      "email": "info@apple.com",
+      "telephone": "02012345678",
+      "updatedTs": "2017-08-09T14:36:49+00:00",
+      "address": "/addresses/4"
+    },
+    {
+      "id": 5,
+      "name": "Nike",
+      "orgurl": "http://www.nike.com/uk/",
+      "firstName": "John",
+      "lastName": "Snow",
+      "email": "info@nike.co.uk",
+      "telephone": "02012345678",
+      "updatedTs": "2017-08-09T14:36:49+00:00",
+      "address": "/addresses/5"
+    },
+    {
+      "name": "irfolojiii",
+      "orgurl": "asdasd.com",
+      "firstName": "İrfan",
+      "lastName": "Meşe",
+      "email": "irfnms@gmail.com",
+      "telephone": "05522596373",
+      "address": "Fırat mahallesi 516. Sokak agc4 apt. No 14",
+      "id": 6
+    },
+    {
+      "id": 7,
+      "name": "ugulıfgy",
+      "orgurl": "www.asdasd.com",
+      "firstName": "İrfan 2",
+      "lastName": "Meşe 2",
+      "email": "irfnms@gmail.com",
+      "telephone": "05522596373",
+      "updatedTs": "2022-11-24T03:46:19.998Z",
+      "address": "Fırat mahallesi 516. Sokak agc4 apt. No 14"
+    }
+  ]
+}

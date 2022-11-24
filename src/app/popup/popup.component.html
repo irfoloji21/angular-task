@@ -1,0 +1,59 @@
+<form class="example-form" [formGroup]="companyform" (ngSubmit)="SaveCompany()">
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Id</mat-label>
+    <input matInput placeholder="ID" formControlName="id" >
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Company Name</mat-label>
+    <input matInput placeholder="Company Name" formControlName="name" >
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>URL</mat-label>
+    <input matInput placeholder="URL" formControlName="orgurl" >
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>First Name</mat-label>
+    <input matInput placeholder="First Name" formControlName="firstName" >
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Last Name</mat-label>
+    <input matInput placeholder="Last Name" formControlName="lastName" >
+
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput placeholder="Email" formControlName="email" >
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Phone</mat-label>
+    <input matInput placeholder="Phone" formControlName="telephone" >
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" style="display: none;" appearance="fill">
+    <mat-label>Update Date</mat-label>
+    <input matInput formControlName="updatedTs" [ngModel]="filingDate" />
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Address</mat-label>
+    <input matInput placeholder="Address" formControlName="address" >
+  </mat-form-field>
+
+
+
+
+
+
+
+
+  <div class="example-button-row">
+    <button mat-raised-button color="primary">Save</button> | <a (click)="closepopup()" mat-raised-button color="accent">Close</a>
+  </div>
+</form>
