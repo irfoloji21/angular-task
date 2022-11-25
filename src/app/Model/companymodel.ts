@@ -1,5 +1,5 @@
 export interface companymodel{
-  id:number,
+  id:any,
   name:string,
   orgurl:string,
   firstName:string,
@@ -7,5 +7,5 @@ export interface companymodel{
   email:string,
   telephone:string,
   updatedTs:Date,
-  address:string,
+  address:string
 }

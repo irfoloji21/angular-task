@@ -9,7 +9,7 @@ import { companymodel } from '../Model/companymodel';
 export class ApiService {
 
   constructor(private http:HttpClient) { }
-  apiurl='https://arkham.cvtr.io/test/api/advertisers';
+  apiurl='http://localhost:3000/companies';
 
   Getallcompany(){
     return this.http.get<any>(this.apiurl);
@@ -30,4 +30,9 @@ export class ApiService {
   UpdateCompany(id:any, companydata:any){
     return this.http.put(this.apiurl + '/' + id,companydata);
   }
+  getCompaniesFromNgrx(){
+    console.log("dd");
+    
+  }
+
   }
