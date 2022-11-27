@@ -4,7 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CompanyComponent } from './company/company.component';
-import { PopupComponent } from './popup/popup.component';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -16,6 +15,8 @@ import { EffectsModule } from '@ngrx/effects';
 import { CompanyEffects } from './state/companies/company.effects';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MaterialModule } from 'src/material.module';
+import { MatDialogModule } from '@angular/material/dialog';
+import { PopupComponent } from './popup/popup.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { MaterialModule } from 'src/material.module';
     PopupComponent
   ],
   imports: [
+    MatDialogModule,
     MaterialModule,
     BrowserModule,
     FormsModule,

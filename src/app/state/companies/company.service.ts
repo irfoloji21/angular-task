@@ -4,7 +4,6 @@ import { companymodel } from 'src/app/Model/companymodel';
 import { HttpClient } from '@angular/common/http';
 @Injectable({ providedIn: 'root' })
 export class CompanyService {
-
   constructor(private http:HttpClient) {}
 
   apiurlforCompanies='http://localhost:3000/companies';
@@ -17,9 +16,9 @@ export class CompanyService {
 
     return this.http.get<companymodel[]>(this.apiurlforCompanies);
   }
-  CreateCompany(companydata:companymodel): Observable<companymodel>{
+  CreateCompany(companydata:any): Observable<any>{
  
-    return this.http.post<companymodel>(this.apiurlforCompanies,companydata);
+    return this.http.post<any>(this.apiurlforCompanies,companydata);
   }
   CreateAddress(addressData:any): Observable<any>{
  

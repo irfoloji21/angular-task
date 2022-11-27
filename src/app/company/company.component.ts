@@ -73,20 +73,12 @@ export class CompanyComponent implements OnInit {
   res!:any[];
   
   ngOnInit() {
- 
-    
-  
-
-    
- this.LoadCompany()
-
+    this.LoadCompany()
    }
 
   displayColumns :string[]= ['id','name','orgurl','firstName','lastName','email','telephone','updatedTs','address'];
 
   Openpopup(id: any) {
- 
-    
     const _popup = this.dialog.open(PopupComponent, {
       width: '500px',
       exitAnimationDuration: '1000ms',
@@ -120,9 +112,8 @@ export class CompanyComponent implements OnInit {
         this.LoadCompany();
       }); */
     }, function () {
-
+      
     })
-
   }
 }
 

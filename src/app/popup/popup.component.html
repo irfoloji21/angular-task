@@ -8,7 +8,7 @@
   <mat-form-field class="example-full-width" appearance="fill">
     <mat-label>Company Name</mat-label>
     <input class="form-control" matInput placeholder="Company Name" formControlName="name" required ngModel>
-    <mat-error *ngIf="companyform.controls.name.hasError('minlength')">
+    <mat-error class="error" *ngIf="companyform.controls.name.hasError('minlength')">
       C.Name must be at least <strong>3 characters long</strong>
     </mat-error>
     <mat-error *ngIf="companyform.controls.name.hasError('maxlength')">

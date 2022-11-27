@@ -1,35 +1,62 @@
-import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientModule } from '@angular/common/http';
+import { TestBed, async } from '@angular/core/testing'; // 1
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { MaterialModule } from 'src/material.module';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { CompanyComponent } from './company/company.component';
+import { environment } from './environments/environment';
+import { PopupComponent } from './popup/popup.component';
+import { CompanyEffects } from './state/companies/company.effects';
+import { companyReducer } from './state/companies/company.reducer';
+ 
 describe('AppComponent', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        PopupComponent,
+        CompanyComponent
+      ],
+      imports: [
+        MatDialogModule,
+        MaterialModule,
+        BrowserModule,
+        FormsModule,
+        ReactiveFormsModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatNativeDateModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+        StoreModule.forRoot({ companies: companyReducer }),
+        StoreDevtoolsModule.instrument({
+          maxAge: 25,
+          logOnly: environment.production,
+        }),
+        EffectsModule.forRoot([CompanyEffects]),
       ],
     }).compileComponents();
+  }));
+ 
+
+  it(`should have as title 'AngularTask'`, () => {  //5
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app.title).toEqual('AngularTask');
   });
 
-  it('should create the app', () => {
+  it('should create the app', () => { // 4
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
+    const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   });
-
-  it(`should have as title 'angular-task'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-task');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('angular-task app is running!');
-  });
+ 
 });
