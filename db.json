@@ -64,82 +64,7 @@
       "telephone": "02012345678",
       "updatedTs": "2017-08-09T14:36:49+00:00",
       "address": "/addresses/5"
-    },
-    {
-      "name": "Mese Education",
-      "orgurl": "2222222222",
-      "firstName": "mahmut",
-      "lastName": "mese",
-      "email": "1qlradrvkxicwhenanukz@niwghx.online",
-      "telephone": "02222222333",
-      "updatedTs": "2022-11-25T17:36:58.936Z",
-      "address": "/addresses/6",
-      "city": "2222222333",
-      "postCode": "ddsd",
-      "id": 6,
-      "@id": "/advertisers/6",
-      "@type": "advertisers"
-    },
-    {
-      "name": "Mese Educationdd",
-      "orgurl": "2222222111",
-      "firstName": "mahmut",
-      "lastName": "mese",
-      "email": "1qlradrvkxicwhenanukz@niwghx.online",
-      "telephone": "02222222333",
-      "updatedTs": "2022-11-25T18:04:27.150Z",
-      "address": "/addresses/7",
-      "city": "ddd",
-      "postCode": "ddd",
-      "id": 7,
-      "@id": "/advertisers/7",
-      "@type": "advertisers"
-    },
-    {
-      "name": "Mese Education",
-      "orgurl": "2222222111",
-      "firstName": "mahmut",
-      "lastName": "mese",
-      "email": "1qlradrvkxicwhenanukz@niwghx.online",
-      "telephone": "02222222333",
-      "updatedTs": "2022-11-25T18:07:45.482Z",
-      "address": "/addresses/8",
-      "city": "2222222333",
-      "postCode": "111",
-      "id": 8,
-      "@id": "/advertisers/8",
-      "@type": "advertisers"
-    },
-    {
-      "name": "gandalf",
-      "orgurl": "ykk.com",
-      "firstName": "asd",
-      "lastName": "dsa",
-      "email": "asd@dsa.com",
-      "telephone": "55522232210",
-      "updatedTs": "2022-11-27T00:22:13.578Z",
-      "address": "/addresses/9",
-      "city": "new york",
-      "postCode": "21070",
-      "id": 9,
-      "@id": "/advertisers/9",
-      "@type": "advertisers"
-    },
-    {
-      "name": "qwerty",
-      "orgurl": "qwerty.com",
-      "firstName": "qwerty",
-      "lastName": "asdf",
-      "email": "qwerty@asd.dsa",
-      "telephone": "12345679034",
-      "updatedTs": "2022-11-27T00:23:55.024Z",
-      "address": "/addresses/10",
-      "city": "london",
-      "postCode": "se14 5nh",
-      "id": 10,
-      "@id": "/advertisers/10",
-      "@type": "advertisers"
-    }
+    } 
   ],
   "addresses": [
     {
@@ -186,51 +111,6 @@
       "city": "London",
       "postcode": "EC1M 4NH",
       "updatedTs": "2017-04-03T10:01:27+00:00"
-    },
-    {
-      "@id": "/addresses/6",
-      "@type": "Address",
-      "city": "2222222333",
-      "address": "63B Jerningham Road",
-      "id": 6,
-      "postcode": "ddsd",
-      "updatedTs": "2022-11-25T17:36:58.929Z"
-    },
-    {
-      "@id": "/addresses/7",
-      "@type": "Address",
-      "city": "ddd",
-      "address": "63B Jerningham Road",
-      "id": 7,
-      "postcode": "ddd",
-      "updatedTs": "2022-11-25T18:04:27.146Z"
-    },
-    {
-      "@id": "/addresses/8",
-      "@type": "Address",
-      "city": "2222222333",
-      "address": "63B Jerningham Road",
-      "id": 8,
-      "postcode": "111",
-      "updatedTs": "2022-11-25T18:07:45.477Z"
-    },
-    {
-      "@id": "/addresses/9",
-      "@type": "Address",
-      "city": "new york",
-      "address": "old city",
-      "id": 9,
-      "postcode": "21070",
-      "updatedTs": "2022-11-27T00:22:13.570Z"
-    },
-    {
-      "@id": "/addresses/10",
-      "@type": "Address",
-      "city": "london",
-      "address": "london",
-      "id": 10,
-      "postcode": "se14 5nh",
-      "updatedTs": "2022-11-27T00:23:55.017Z"
     }
   ]
 }

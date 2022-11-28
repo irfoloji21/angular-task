@@ -1,5 +1,7 @@
-export interface companymodel{
-  id:any,
+export interface Company{
+  '@id':string,
+  '@type':string,
+  id:number,
   name:string,
   orgurl:string,
   firstName:string,

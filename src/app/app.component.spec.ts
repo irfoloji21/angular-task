@@ -14,17 +14,13 @@ import { AppComponent } from './app.component';
 import { CompanyComponent } from './company/company.component';
 import { environment } from './environments/environment';
 import { PopupComponent } from './popup/popup.component';
-import { CompanyEffects } from './state/companies/company.effects';
-import { companyReducer } from './state/companies/company.reducer';
- 
+import { CompanyEffects } from './state/company.effects';
+import { companyReducer } from './state/company.reducer';
+
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        AppComponent,
-        PopupComponent,
-        CompanyComponent
-      ],
+      declarations: [AppComponent, PopupComponent, CompanyComponent],
       imports: [
         MatDialogModule,
         MaterialModule,
@@ -45,18 +41,18 @@ describe('AppComponent', () => {
       ],
     }).compileComponents();
   }));
- 
 
-  it(`should have as title 'AngularTask'`, () => {  //5
+  it(`should have as title 'AngularTask'`, () => {
+    //5
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual('AngularTask');
   });
 
-  it('should create the app', () => { // 4
+  it('should create the app', () => {
+    // 4
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   });
- 
 });

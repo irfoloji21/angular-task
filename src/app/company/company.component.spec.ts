@@ -14,8 +14,8 @@ import { AppRoutingModule } from '../app-routing.module';
 import { AppComponent } from '../app.component';
 import { environment } from '../environments/environment';
 import { PopupComponent } from '../popup/popup.component';
-import { CompanyEffects } from '../state/companies/company.effects';
-import { companyReducer } from '../state/companies/company.reducer';
+import { CompanyEffects } from '../state/company.effects';
+import { companyReducer } from '../state/company.reducer';
 import { CompanyComponent } from './company.component';
 
 class Page {
@@ -83,8 +83,5 @@ describe('CompanyComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  // it('should create', () => {
-  //   expect(component).toBeTruthy();
-  // });
 
 })

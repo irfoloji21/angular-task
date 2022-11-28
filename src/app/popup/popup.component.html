@@ -81,7 +81,16 @@
     <mat-label>Update Date</mat-label>
     <input matInput formControlName="updatedTs" [ngModel]="filingDate" />
   </mat-form-field>
+  <mat-form-field class="example-full-width" style="display: none;" appearance="fill">
+    <mat-label>  @id</mat-label>
+    <input matInput formControlName="@id"   />
+  </mat-form-field>
 
+  
+  <mat-form-field class="example-full-width" style="display: none;" appearance="fill">
+    <mat-label>  @type</mat-label>
+    <input matInput formControlName="@type"   />
+  </mat-form-field>
   <mat-form-field class="example-full-width" appearance="fill">
     <mat-label>Address</mat-label>
     <input matInput placeholder="Address" formControlName="address">

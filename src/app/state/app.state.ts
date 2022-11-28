@@ -1,8 +1,8 @@
-import { CompanyState } from './companies/company.reducer';
+import { AdvertiserState } from './company.reducer';
 
 
 export interface AppState {
-  companies: CompanyState,
-  addresses: CompanyState
+  companies: AdvertiserState,
+  addresses: AdvertiserState
 
 }

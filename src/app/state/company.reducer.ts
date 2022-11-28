@@ -1,4 +1,6 @@
 import { createReducer, on } from '@ngrx/store';
+import { Address } from '../model/address';
+import { Company } from '../model/company';
 import {
   loadCompanies,
   loadCompaniesSuccess,
@@ -6,30 +8,28 @@ import {
   addCompany,
   addCompanySuccess,
   addAddress,
-  addAddressSuccess
+  addAddressSuccess,
+  addCompanyFailure,
+  addAddressFailure
 } from './company.actions';
-import { companymodel } from '../../Model/companymodel';
 
-
-export interface CompanyState {
-  addresses:any;
-  companies: any;
+export interface AdvertiserState {
+  addresses: Address[];
+  companies:Company[];
   error: any;
   status: 'pending' | 'loading' | 'error' | 'success';
 }
-
-export const initialState: CompanyState = {
-  addresses:[],
+ 
+export const initialState: AdvertiserState = {
+  addresses: [],
   companies: [],
   error: null,
   status: 'pending',
 };
 
- 
- 
 export const companyReducer = createReducer(
   // Supply the initial state
-initialState,
+  initialState,
 
   // Trigger loading the Companies
   on(loadCompanies, (state) => ({ ...state, status: 'loading' })),
@@ -48,29 +48,34 @@ initialState,
   })),
   on(addCompany, (state, { company }) => ({
     ...state,
-   // companies: [...state.companies['hydra:member'],  company ],
-   companies: [...state.companies,  company ],
-
+    companies: [...state.companies, company],
   })),
-  on(addCompanySuccess, (state,  company ) => ({
+
+  on(addCompanySuccess, (state, company) => ({
     ...state,
-     company,
+    company,
     error: null,
     status: 'success',
+  })),
+  on(addCompanyFailure, (state, { error }) => ({
+    ...state,
+    error: error,
+    status: 'error',
   })),
 
   on(addAddress, (state, { address }) => ({
     ...state,
-   // companies: [...state.companies['hydra:member'],  company ],
-   addresses: [...state.addresses,  address ],
-
+    addresses: [...state.addresses, address],
   })),
-  on(addAddressSuccess, (state,  address ) => ({
+  on(addAddressSuccess, (state, address) => ({
     ...state,
-     address,
+    address,
     error: null,
     status: 'success',
   })),
-
-
+  on(addAddressFailure, (state, { error }) => ({
+    ...state,
+    error: error,
+    status: 'error',
+  })),
 );

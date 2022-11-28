@@ -1,16 +1,15 @@
-import { HttpClientTestingModule } from "@angular/common/http/testing";
-import { DebugElement } from "@angular/core";
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { MatDialogModule, MAT_DIALOG_DATA } from "@angular/material/dialog";
-import { MatSnackBarModule } from "@angular/material/snack-bar";
-import { BrowserModule, By } from "@angular/platform-browser";
-import { Store } from "@ngrx/store";
-import { MaterialModule } from "src/material.module";
-import { AppComponent } from "../app.component";
-import { CompanyComponent } from "../company/company.component";
-import { PopupComponent } from "./popup.component";
-
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { DebugElement } from '@angular/core';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatDialogModule, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { BrowserModule, By } from '@angular/platform-browser';
+import { Store } from '@ngrx/store';
+import { MaterialModule } from 'src/material.module';
+import { AppComponent } from '../app.component';
+import { CompanyComponent } from '../company/company.component';
+import { PopupComponent } from './popup.component';
 
 describe('PopupComponent', () => {
   let component: PopupComponent;
@@ -18,19 +17,25 @@ describe('PopupComponent', () => {
   let debugEl: DebugElement;
   let el: HTMLElement;
 
-  beforeEach(async (() => {
+  beforeEach(async(() => {
     TestBed.configureTestingModule({
       providers: [
         { provide: MAT_DIALOG_DATA, useValue: {} },
-        { provide: Store, useValue: {} }
+        { provide: Store, useValue: {} },
       ],
-      declarations: [
-        AppComponent,
-        CompanyComponent,
-        PopupComponent],
-      imports: [ MaterialModule, MatSnackBarModule, MatDialogModule, HttpClientTestingModule, FormsModule, BrowserModule, ReactiveFormsModule],
+      declarations: [AppComponent, CompanyComponent, PopupComponent],
+      imports: [
+        MaterialModule,
+        MatSnackBarModule,
+        MatDialogModule,
+        HttpClientTestingModule,
+        FormsModule,
+        BrowserModule,
+        ReactiveFormsModule,
+      ],
     })
-      .compileComponents().then(() => {
+      .compileComponents()
+      .then(() => {
         fixture = TestBed.createComponent(PopupComponent);
         component = fixture.componentInstance;
         debugEl = fixture.debugElement.query(By.css('form'));
@@ -76,4 +81,3 @@ describe('PopupComponent', () => {
     expect(component.companyform.valid).toBeTruthy();
   }));
 });
-
